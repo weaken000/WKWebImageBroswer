@@ -6,7 +6,7 @@
 imageView的缓存复用
 
 ### CocoaPod
-    pod 'WKWebImageBrowser', '~> 0.0.4'
+    pod 'WKWebImageBrowser', '~> 0.0.1'
 ### API
 
 图片下载
