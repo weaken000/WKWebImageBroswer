@@ -26,6 +26,8 @@
 		175C2F7820318A4F00074DE7 /* WKViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C2F6D20318A4F00074DE7 /* WKViewControllerTransition.swift */; };
 		175C2F7920318A4F00074DE7 /* WKWebImageBrowserCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C2F6E20318A4F00074DE7 /* WKWebImageBrowserCompatible.swift */; };
 		175C2F7B20318E9800074DE7 /* example.gif in Resources */ = {isa = PBXBuildFile; fileRef = 175C2F7A20318E9800074DE7 /* example.gif */; };
+		4CB25B0320591E8E00DF54EE /* WKLoadImageErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB25B0220591E8E00DF54EE /* WKLoadImageErrorView.swift */; };
+		4CB25B052059263F00DF54EE /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CB25B042059263F00DF54EE /* error.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		175C2F6D20318A4F00074DE7 /* WKViewControllerTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKViewControllerTransition.swift; sourceTree = "<group>"; };
 		175C2F6E20318A4F00074DE7 /* WKWebImageBrowserCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebImageBrowserCompatible.swift; sourceTree = "<group>"; };
 		175C2F7A20318E9800074DE7 /* example.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = example.gif; sourceTree = "<group>"; };
+		4CB25B0220591E8E00DF54EE /* WKLoadImageErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKLoadImageErrorView.swift; sourceTree = "<group>"; };
+		4CB25B042059263F00DF54EE /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		175C2F6320318A4F00074DE7 /* WKWebImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				4CB25B042059263F00DF54EE /* error.png */,
 				175C2F6420318A4F00074DE7 /* arrow_left_white.png */,
 				175C2F6520318A4F00074DE7 /* MD5.swift */,
 				175C2F6620318A4F00074DE7 /* WKFileManager.swift */,
@@ -165,6 +170,7 @@
 				175C2F6C20318A4F00074DE7 /* WKSiglePictureView.swift */,
 				175C2F6D20318A4F00074DE7 /* WKViewControllerTransition.swift */,
 				175C2F6E20318A4F00074DE7 /* WKWebImageBrowserCompatible.swift */,
+				4CB25B0220591E8E00DF54EE /* WKLoadImageErrorView.swift */,
 			);
 			name = WKWebImageBrowser;
 			path = ../WKWebImageBrowser;
@@ -282,6 +288,7 @@
 			files = (
 				175C2F6F20318A4F00074DE7 /* arrow_left_white.png in Resources */,
 				175C2F29203189EA00074DE7 /* LaunchScreen.storyboard in Resources */,
+				4CB25B052059263F00DF54EE /* error.png in Resources */,
 				175C2F26203189EA00074DE7 /* Assets.xcassets in Resources */,
 				175C2F7B20318E9800074DE7 /* example.gif in Resources */,
 				175C2F24203189EA00074DE7 /* Main.storyboard in Resources */,
@@ -309,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB25B0320591E8E00DF54EE /* WKLoadImageErrorView.swift in Sources */,
 				175C2F7520318A4F00074DE7 /* WKPictureBrowserViewController.swift in Sources */,
 				175C2F7220318A4F00074DE7 /* WKImageDownLoader.swift in Sources */,
 				175C2F7820318A4F00074DE7 /* WKViewControllerTransition.swift in Sources */,

@@ -94,7 +94,7 @@ class WKWebImageBrowser: UIView {
     //MARK: Methods
     private func setup() {
         
-        broswerScroll.addObserver(self, forKeyPath: WKScrollContentOffset, options: [.old, .new], context: nil)
+        
         
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         titleLabel.textAlignment = .center
@@ -124,6 +124,8 @@ class WKWebImageBrowser: UIView {
         broswerScroll.addSubview(firstPictureView)
         siglePictureViewArray.append(firstPictureView)
         currentPictureView = firstPictureView
+        
+        broswerScroll.addObserver(self, forKeyPath: WKScrollContentOffset, options: [.old, .new], context: nil)
     }
     
     private func findPictureView(change: [NSKeyValueChangeKey : Any]?) {

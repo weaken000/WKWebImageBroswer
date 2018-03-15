@@ -53,7 +53,7 @@ class WKProgressView: UIView {
         progressLayer.position = center
         progressLayer.bounds = CGRect(x: 0, y: 0, width: progressRadius, height: progressRadius)
         progressLayer.strokeEnd = progress
-        progressLayer.transform = CATransform3DMakeRotation(-(CGFloat)(M_PI_2), 0, 0, 1)
+        progressLayer.transform = CATransform3DMakeRotation(-CGFloat.pi/2.0, 0, 0, 1)
         self.layer.addSublayer(progressLayer)
     }
     

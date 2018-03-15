@@ -27,11 +27,12 @@ class ViewController: UIViewController {
     
     func setupSubviews() {
         presentImageView = UIImageView()
+        presentImageView.backgroundColor = UIColor.gray
         presentImageView.isUserInteractionEnabled = true
-        presentImageView.wk.setImage(url: URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517822982226&di=7b8c945969eb36e45b1ec14ad0f7ea53&imgtype=0&src=http%3A%2F%2Fol01.tgbusdata.cn%2Fv2%2Fthumb%2Fjpg%2FRTFCMyw1ODAsMTAwLDQsMywxLC0xLDAscms1MCwxOTIuMTY4LjguNjc%3D%2Fu%2Fiphone.tgbus.com%2FUploadFiles%2F201712%2F2017121813381508.jpg"), placeHolder: UIImage(named: ""), progress: { (progress) in
+        presentImageView.wk.setImage(url: URL(string: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517822982226&di=7b8c945969eb36e45b1ec14ad0f7ea53&imgtype=0&src=http%3A%2F%2Fol01.tgbusdata.cn%2Fv2%2Fthumb%2Fjpg%2FRTFCMyw1ODAsMTAwLDQsMywxLC0xLDAscms1MCwxOTIuMTY4LjguNjc%3D%2Fu%2Fiphone.tgbus.com%2FUploadFiles%2F201712%2F2017121813381508.jpg"), placeHolder: nil, progress: { (progress) in
             
         }) { (image, error) in
-            
+
         }
         let width = view.frame.size.width
         let height = view.frame.size.height
@@ -42,9 +43,9 @@ class ViewController: UIViewController {
         pushImageView = UIImageView()
         pushImageView.isUserInteractionEnabled = true
         pushImageView.wk.setImage(url: URL(string: "http://img.zcool.cn/community/0159fa5944bcd3a8012193a34b762d.jpg@2o.jpg"), placeHolder: UIImage(named: ""), progress: { (progress) in
-            
+
         }) { (image, error) in
-            
+
         }
         pushImageView.frame = CGRect(x: (width - 200.0) / 2.0, y: (height / 2.0 + 50.0), width: 200, height: 200)
         pushImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tap_pushImageView)))
@@ -52,8 +53,8 @@ class ViewController: UIViewController {
     }
     
     func tap_presentImageView() {
-        if let vc = WKPictureBrowserViewController(urls: ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517822982226&di=7b8c945969eb36e45b1ec14ad0f7ea53&imgtype=0&src=http%3A%2F%2Fol01.tgbusdata.cn%2Fv2%2Fthumb%2Fjpg%2FRTFCMyw1ODAsMTAwLDQsMywxLC0xLDAscms1MCwxOTIuMTY4LjguNjc%3D%2Fu%2Fiphone.tgbus.com%2FUploadFiles%2F201712%2F2017121813381508.jpg",
-                                                          "http://img.zcool.cn/community/0159fa5944bcd3a8012193a34b762d.jpg@2o.jpg",
+        if let vc = WKPictureBrowserViewController(urls: ["https://timg.jpg",
+                                                          "http://img.zcool.cn/community/0159fa5.jpg",
                                                           "http://a3.topitme.com/2/67/74/11489000958d174672o.jpg",
                                                           "http://img.zcool.cn/community/010f2a5944bc9ba8012193a3190f53.jpg@2o.jpg",
                                                           "http://a3.topitme.com/a/0b/42/1161343925b5a420bao.jpg",
@@ -69,7 +70,7 @@ class ViewController: UIViewController {
     }
     
     func tap_pushImageView() {
-        if let vc = WKPictureBrowserViewController(urls: ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517822982226&di=7b8c945969eb36e45b1ec14ad0f7ea53&imgtype=0&src=http%3A%2F%2Fol01.tgbusdata.cn%2Fv2%2Fthumb%2Fjpg%2FRTFCMyw1ODAsMTAwLDQsMywxLC0xLDAscms1MCwxOTIuMTY4LjguNjc%3D%2Fu%2Fiphone.tgbus.com%2FUploadFiles%2F201712%2F2017121813381508.jpg",
+        if let vc = WKPictureBrowserViewController(urls: ["https://timgsa.jpg",
                                                           "http://img.zcool.cn/community/0159fa5944bcd3a8012193a34b762d.jpg@2o.jpg",
                                                           "http://a3.topitme.com/2/67/74/11489000958d174672o.jpg",
                                                           "http://img.zcool.cn/community/010f2a5944bc9ba8012193a3190f53.jpg@2o.jpg",

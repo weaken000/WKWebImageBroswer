@@ -93,13 +93,14 @@ extension WKWebImageBrowserCompatible where Base: UIImageView {
         }
         
         if let oldURL = base.url {
-            if oldURL.absoluteString != url.absoluteString {
+            //当前下载与之前下载不相同时
+            //if oldURL.absoluteString != url.absoluteString {
                 WKImageDownLoader.share.cancel(oldURL)
                 base.url = url
-            }
-            else {
-                return
-            }
+            //}
+            //else {
+                //return
+            //}
         }
         else {
             base.url = url
@@ -165,8 +166,8 @@ extension WKWebImageBrowserCompatible where Base: UIButton {
         WKImageDownLoader.share.downLoadImage(url, progress: { (percent) in
             progress?(percent)
         }) { (image, error) in
-                self.base.setImage(image, for: state)
-                completion?(image, error)
+            self.base.setImage(image, for: state)
+            completion?(image, error)
         }
         
     }

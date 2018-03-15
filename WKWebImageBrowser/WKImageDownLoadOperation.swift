@@ -152,6 +152,7 @@ extension WKImageDownLoadOperation: URLSessionDownloadDelegate {
         
         if !hasComplete {
             hasComplete = true
+
             completion?(nil, error)
         }
         

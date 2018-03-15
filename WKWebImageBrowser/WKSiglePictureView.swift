@@ -18,6 +18,7 @@ public class WKSiglePictureView: UIView {
     internal let imageView: UIImageView
     internal var indexX = 0
     internal weak var delegate: WKSiglePictureViewDelegate?
+    internal var loadErrorView: WKLoadImageErrorView?
     
     private var progressView: WKProgressView?
     private var originFrame: CGRect?
@@ -26,7 +27,11 @@ public class WKSiglePictureView: UIView {
     
     internal var imageData: WKImageData? {
         didSet {
+            
+            loadErrorView?.hiddenErrorView()
+
             if let newData = imageData {
+                
                 if let image = newData.image {
                     aspectFitImage(image: image)
                 }
@@ -37,17 +42,39 @@ public class WKSiglePictureView: UIView {
                             self.progressView?.config(progress: percent)
                         }
                     }, completion: { [weak self] (image, error) in
+                        
                         if let `self` = self {
-                            self.aspectFitImage(image: image)
-                        }
-                        if let `error` = error {
-                            print(error.localizedDescription)
+                            
+                            self.progressView?.isHidden = true
+
+                            //适配图片
+                            if let `image` = image {
+                                self.aspectFitImage(image: image)
+                                return
+                            }
+                            
+                            //显示错误信息
+                            if let _ = error {
+                                
+                                if let errorView = self.loadErrorView {
+                                    errorView.showError(errorImage: nil, desc: nil)
+                                }
+                                else {
+                                    self.loadErrorView = WKLoadImageErrorView(frame: self.bounds, shouldTapReload: false)
+                                    self.addSubview(self.loadErrorView!)
+                                    self.loadErrorView?.showError(errorImage: nil, desc: nil)
+                                }
+                                
+                            }
+                            
                         }
                     })
                 }
             }
         }
     }
+    
+    
     
     override init(frame: CGRect) {
         
